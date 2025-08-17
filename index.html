@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🎓 Grade Calculator</h2>
+
+    <!-- Menu -->
+    <button onclick="showSection('sgpa')">Calculate SGPA</button>
+    <button onclick="showSection('minMarks')">Minimum Marks Required</button>
+    <button onclick="showSection('cgpa')">Updated CGPA</button>
+
+    <!-- SGPA Section -->
+    <div id="sgpa" class="section hidden">
+      <h3>SGPA Calculator</h3>
+      Number of Subjects: <input type="number" id="sgpaSubjects"><br>
+      <button onclick="sgpaForm()">Next</button>
+      <div id="sgpaInputs"></div>
+      <div id="sgpaResult" class="result hidden"></div>
+    </div>
+
+    <!-- Minimum Marks Section -->
+    <div id="minMarks" class="section hidden">
+      <h3>Minimum Marks Required</h3>
+      Number of Subjects: <input type="number" id="minSubjects"><br>
+      <button onclick="minMarksForm()">Next</button>
+      <div id="minInputs"></div>
+      <div id="minResult" class="result hidden"></div>
+    </div>
+
+    <!-- Updated CGPA Section -->
+    <div id="cgpa" class="section hidden">
+      <h3>Updated CGPA</h3>
+      Previous CGPA: <input type="number" id="prevCgpa" step="0.01"><br>
+      Total Previous Credits: <input type="number" id="prevCredits"><br>
+      Number of Subjects this Semester: <input type="number" id="curSubjects"><br>
+      <button onclick="cgpaForm()">Next</button>
+      <div id="curInputs"></div>
+      <div id="cgpaResult" class="result hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
